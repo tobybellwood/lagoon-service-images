@@ -74,6 +74,7 @@ jobs:
             type=raw,value=${{ env.DOCKER_TAG}},enable={{is_default_branch}}
             # tag event
             type=raw,value=${{ env.DOCKER_TAG}},event=tag
+            type=raw,value=latest,event=tag
             # pull request event
             type=ref,event=pr
             # pull request event

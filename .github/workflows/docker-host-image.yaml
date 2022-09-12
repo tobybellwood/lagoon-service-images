@@ -35,7 +35,7 @@ jobs:
         name: Create SERVICE_TAG variable
         id: service_tag_var
         run: |
-          RAW_TAG=$(echo $(git describe --abbrev=0 --tags --match 'docker-host-*')
+          RAW_TAG=$(echo $(git describe --abbrev=0 --tags --match 'docker-host-*'))
           SERVICE_TAG=${RAW_TAG#"docker-host-"}
           echo "SERVICE_TAG=$SERVICE_TAG" >> $GITHUB_ENV
       -

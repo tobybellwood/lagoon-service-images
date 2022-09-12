@@ -51,7 +51,7 @@ jobs:
           echo "docker-host $VERSION"
       -
         name: Set version for tag build
-        if: "startsWith(github.ref, 'refs/tags/')"
+        if: "startsWith(github.ref, 'refs/tags/docker-host')"
         id: version_tag_build
         run: |
           VERSION=${{ env.SERVICE_TAG }}
@@ -73,7 +73,7 @@ jobs:
             # set tag+build for default branch
             type=raw,value=${{ env.DOCKER_TAG}},enable={{is_default_branch}}
             # tag event
-            type=ref,event=tag
+            type=raw,value=${{ env.DOCKER_TAG}},event=tag
             # pull request event
             type=ref,event=pr
             # pull request event

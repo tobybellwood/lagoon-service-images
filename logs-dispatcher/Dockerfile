@@ -5,12 +5,11 @@ LABEL org.opencontainers.image.source="https://github.com/uselagoon/lagoon-servi
 
 USER root
 
-COPY Gemfile Gemfile.lock /
-COPY vendor /vendor
+COPY Gemfile* /
 
 RUN apk add --no-cache --update --virtual .build-deps \
       build-base ruby-dev ruby-bundler \
-      && BUNDLE_FROZEN=true BUNDLE_SYSTEM=true bundle install --local \
+      && BUNDLE_FROZEN=true BUNDLE_SYSTEM=true bundle install \
       && gem list \
       && apk del .build-deps \
       && apk add --no-cache curl

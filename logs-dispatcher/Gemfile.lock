@@ -154,19 +154,19 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  fluent-plugin-cloudwatch-logs
-  fluent-plugin-datadog
-  fluent-plugin-kubernetes_metadata_filter
-  fluent-plugin-multi-format-parser
-  fluent-plugin-prometheus
-  fluent-plugin-rabbitmq
-  fluent-plugin-record-modifier
-  fluent-plugin-remote-syslog
-  fluent-plugin-rewrite-tag-filter
-  fluent-plugin-route
-  fluent-plugin-s3
-  fluent-plugin-splunk-enterprise
-  fluent-plugin-sumologic_output
+  fluent-plugin-cloudwatch-logs (~> 0.14.3)
+  fluent-plugin-datadog (~> 0.14.2)
+  fluent-plugin-kubernetes_metadata_filter (~> 3.1.2)
+  fluent-plugin-multi-format-parser (~> 1.0.0)
+  fluent-plugin-prometheus (~> 2.0.3)
+  fluent-plugin-rabbitmq (~> 0.0.9)
+  fluent-plugin-record-modifier (~> 2.1.1)
+  fluent-plugin-remote-syslog (~> 1.1)
+  fluent-plugin-rewrite-tag-filter (~> 2.4.0)
+  fluent-plugin-route (~> 1.0.0)
+  fluent-plugin-s3 (~> 1.7.2)
+  fluent-plugin-splunk-enterprise (~> 0.10.2)
+  fluent-plugin-sumologic_output (~> 1.8.0)
 
 BUNDLED WITH
    2.3.25
